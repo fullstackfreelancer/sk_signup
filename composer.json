@@ -1,0 +1,41 @@
+{
+    "name": "fullstackfreelancer/sk_signup",
+    "type": "typo3-cms-extension",
+    "version": "1.0.0",
+    "description": "Provides a Sign Up Form for the Frontent",
+    "homepage": "https://simonkoehler.com/",
+    "authors": [
+        {
+            "name": "Simon Köhler",
+            "email": "info@simonkoehler.com",
+            "homepage": "https://simonkoehler.com/",
+            "role": "Developer"
+        }
+    ],
+    "funding": [
+        {
+            "type": "paypal",
+            "url": "https://paypal.me/fullstackfreelancer/25"
+        }
+    ],
+    "support": {
+        "email": "info@simonkoehler.com",
+        "docs": "https://simon-koehler.com/"
+    },
+    "license": "GPL-3.0-or-later",
+    "require": {
+        "typo3/cms-core": "^12.0.0 || ^12.4"
+    },
+    "keywords": [
+        "TYPO3",
+        "extension",
+        "fontawesome",
+        "frontend",
+        "icons",
+        "css",
+        "addon"
+    ],
+    "replace": {
+        "typo3-ter/sk_signup": "self.version"
+    }
+}
