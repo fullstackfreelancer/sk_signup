@@ -1,0 +1,75 @@
+
+<f:if condition="!{settings.storagePid} || !{settings.userpages.signup}">
+    <div class="alert alert-warning">
+        <h5>NO STORAGE OR SIGNUP PAGE DEFINED!</h5>
+        <p>The Form will NOT work without a storagePid and signup page set in Typoscript Constants.</p>
+    </div>
+</f:if>
+<f:form id="tx-signup-form" action="form" controller="Signup" enctype="multipart/form-data" class="tx-signup-form bg-dark-subtle border shadow">
+
+        <input type="hidden" name="tx_signup_default[init]" value="">
+        <header class="p-4 border-bottom">
+            <div class="fs-3"><f:translate key="form.header"/></div>
+        </header>
+        <div class="p-4">
+
+        <f:switch expression="{status}">
+            <f:case value="user_added">
+                <p><f:format.raw><f:translate key="form.user_added" arguments="{0:'{username}', 1:'{email}'}"/></f:format.raw></p>
+            </f:case>
+            <f:case value="errors">
+                <ul class="text-danger">
+                <f:for each="{errors}" as="error">
+                    <li><f:translate key="error.{error}"/></li>
+                </f:for>
+                </ul>
+                <f:render section="formFields" arguments="{_all}"/>
+            </f:case>
+            <f:defaultCase>
+                <p><f:format.raw><f:translate key="form.welcome_text"/></f:format.raw></p>
+                <f:render section="formFields" arguments="{_all}"/>
+            </f:defaultCase>
+        </f:switch>
+
+        </div>
+
+</f:form>
+
+<f:section name="formFields">
+    <div class="form-floating mb-3">
+        <input id="tx-signup-control-1" class="form-control" type="text" name="tx_signup_default[username]" value="{args.username}">
+        <label for="tx-signup-control-1"><f:translate key="formlabel.username"/></label>
+    </div>
+    <div class="form-floating mb-3">
+        <input id="tx-signup-control-2" class="form-control" type="email" name="tx_signup_default[email]" value="{args.email}">
+        <label for="tx-signup-control-2"><f:translate key="formlabel.email"/></label>
+    </div>
+    <div class="form-floating mb-3">
+        <input id="tx-signup-control-3" class="form-control" type="password" name="tx_signup_default[password]" value="{args.password}">
+        <label for="tx-signup-control-3"><f:translate key="formlabel.password"/></label>
+    </div>
+    <f:if condition="{settings.recaptcha.enabled}">
+        <div class="recaptcha-container">
+            RECAPTCHA ENABLED
+        </div>
+    </f:if>
+
+    <button class="btn btn-lg btn-primary" type="submit" name="signup">
+        <f:translate key="formlabel.button"/>
+    </button>
+
+    <button type="submit" class="g-recaptcha"
+        data-sitekey="6LfotycpAAAAABG3-LkB4V3qGtKMicPb6XIyZ8TY"
+        data-callback='onSubmit'
+        data-action='submit'>
+      <f:translate key="formlabel.button"/>
+    </button>
+</f:section>
+
+<f:asset.script identifier="gugle" src="https://www.google.com/recaptcha/enterprise.js?render=6LfotycpAAAAABG3-LkB4V3qGtKMicPb6XIyZ8TY"/>
+<f:asset.script identifier="gagle">
+function onSubmit(token) {
+    console.log(token)
+    //document.getElementById("tx-signup-form").submit();
+}
+</f:asset.script>

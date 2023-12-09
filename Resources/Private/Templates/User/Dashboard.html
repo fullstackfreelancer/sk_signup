@@ -1,0 +1,26 @@
+<section class="my-2 my-lg-3">
+    <div class="container">
+        <header>
+            <h1>Hi <span class="text-primary">{user.username}</span></h1>
+        </header>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="p-4 border mb-3">
+                    <f:if condition="{user.company}">
+                        <div>{user.company}</div>
+                    </f:if>
+                    <f:if condition="{user.first_name} || {user.last_name}">
+                        <div>{user.first_name} {user.last_name}</div>
+                    </f:if>
+                    <f:if condition="{user.address}">
+                        <div>{user.address}</div>
+                    </f:if>
+                </div>
+                <f:link.page pageUid="{settings.userpages.settings}" class="btn btn-outline-primary"><i lass="fa fa-chevron-right"></i> <f:translate key="plugin.user.dashboard.button.edit_settings"/></f:link.page>
+            </div>
+            <div class="col-md-8">
+
+            </div>
+        </div>
+    </div>
+</section>

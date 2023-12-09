@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xliff version="1.0" xmlns:t3="http://typo3.org/schemas/xliff">
+  <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2023-09-02T06:16:37Z" product-name="signup">
+    <header/>
+    <body>
+
+        <trans-unit id="form.header">
+            <target>Sign Up</target>
+        </trans-unit>
+        <trans-unit id="form.description">
+            <target>Sign up for a new account now.</target>
+        </trans-unit>
+        <trans-unit id="form.user_added">
+            <target><![CDATA[Your account has been created with the username <strong>%1$s.</strong> Check your email at <strong>%2$s</strong> to verify your identity by clicking the link in the email.]]></target>
+        </trans-unit>
+        <trans-unit id="form.welcome_text">
+            <target><![CDATA[Fülle das untenstehende Formular aus, um dich für ein neues Konto auf dieser Website anzumelden.]]></target>
+        </trans-unit>
+        <trans-unit id="form.confirmation_success">
+            <target><![CDATA[Thank you for the confirmation. Your account is now active.<br><a href="%1$s">Login Now</a>]]></target>
+        </trans-unit>
+        <trans-unit id="form.confirmation_failure">
+            <target><![CDATA[Sorry, no user account was found with this key. The account was either already confirmed, or the key doesn't exist.]]></target>
+        </trans-unit>
+        <trans-unit id="form.confirmation_nokey">
+            <target><![CDATA[No confirmation parameters are given.]]></target>
+        </trans-unit>
+
+        <trans-unit id="formlabel.username">
+            <target>Benutzername</target>
+        </trans-unit>
+        <trans-unit id="formlabel.email">
+            <target>E-Mail</target>
+        </trans-unit>
+        <trans-unit id="formlabel.password">
+            <target>Passwort</target>
+        </trans-unit>
+        <trans-unit id="formlabel.button">
+            <target>Jetzt anmelden</target>
+        </trans-unit>
+
+        <trans-unit id="error.username_empty">
+            <target>Das Feld Benutzername ist leer</target>
+        </trans-unit>
+        <trans-unit id="error.username_exists">
+            <target>Ein Account mit diesem Namen existiert bereits</target>
+        </trans-unit>
+        <trans-unit id="error.username_outofrange">
+            <target>Der Benutzername muss zwischen 3 und 20 Zeichen haben</target>
+        </trans-unit>
+        <trans-unit id="error.email_empty">
+            <target>Das E-Mail-Feld ist leer</target>
+        </trans-unit>
+        <trans-unit id="error.email_exists">
+            <target>Es existiert bereits ein Konto mit dieser E-Mail-Adresse</target>
+        </trans-unit>
+        <trans-unit id="error.email_invalid">
+            <target>Die E-Mail-adresse ist nicht gültig</target>
+        </trans-unit>
+        <trans-unit id="error.password_empty">
+            <target>Das Passwortfeld ist leer</target>
+        </trans-unit>
+        <trans-unit id="error.password_invalid">
+            <target>Das Passwort muss mindestens 8 Zeichen lang sein und 1 Zahl, 1 Sonderzeichen und 1 Großbuchstaben enthalten</target>
+        </trans-unit>
+
+        <trans-unit id="plugin.user.dashboard.button.edit_settings">
+            <target>Einstellungen bearbeiten</target>
+        </trans-unit>
+
+
+        <trans-unit id="plugin.user.settings.title">
+            <source>Account Settings</source>
+        </trans-unit>
+        <trans-unit id="plugin.user.settings.form_title">
+            <source>Your personal data</source>
+        </trans-unit>
+        <trans-unit id="plugin.user.settings.label.username">
+            <source>Username</source>
+        </trans-unit>
+        <trans-unit id="plugin.user.settings.label.address">
+            <source>Address</source>
+        </trans-unit>
+        <trans-unit id="plugin.user.settings.label.zip">
+            <source>ZIP Code</source>
+        </trans-unit>
+        <trans-unit id="plugin.user.settings.label.city">
+            <source>City</source>
+        </trans-unit>
+        <trans-unit id="plugin.user.settings.label.email">
+            <source>Email</source>
+        </trans-unit>
+        <trans-unit id="plugin.user.settings.label.first_name">
+            <source>First Name</source>
+        </trans-unit>
+        <trans-unit id="plugin.user.settings.label.middle_name">
+            <source>Middle Name</source>
+        </trans-unit>
+        <trans-unit id="plugin.user.settings.label.last_name">
+            <source>Last Name</source>
+        </trans-unit>
+        <trans-unit id="plugin.user.settings.label.country">
+            <source>Country</source>
+        </trans-unit>
+        <trans-unit id="plugin.user.settings.label.phone">
+            <source>Telephone</source>
+        </trans-unit>
+        <trans-unit id="plugin.user.settings.label.password">
+            <source>Password</source>
+        </trans-unit>
+        <trans-unit id="plugin.user.settings.label.company">
+            <source>Company</source>
+        </trans-unit>
+        <trans-unit id="plugin.user.settings.button.submit">
+            <source>Save Settings</source>
+        </trans-unit>
+
+
+    </body>
+  </file>
+</xliff>

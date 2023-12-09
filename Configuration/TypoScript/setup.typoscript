@@ -1,0 +1,44 @@
+plugin.tx_signup{
+
+    persistence {
+        Tx_Extbase_Domain_Model_FrontendUser {
+            mapping {
+              tableName = fe_users
+              recordType = Tx_Extbase_Domain_Model_FrontendUser
+            }
+        }
+    }
+    settings{
+        demo = {$plugin.tx_signup.settings.demo}
+        userpages{
+            dashboard = {$plugin.tx_signup.settings.userpages.dashboard}
+            settings = {$plugin.tx_signup.settings.userpages.settings}
+            signup = {$plugin.tx_signup.settings.userpages.signup}
+            login = {$plugin.tx_signup.settings.userpages.login}
+        }
+        recaptcha{
+            enabled = {$plugin.tx_signup.settings.recaptcha.enabled}
+            sitekey = {$plugin.tx_signup.settings.recaptcha.sitekey}
+            secretkey = {$plugin.tx_signup.settings.recaptcha.secretkey}
+        }
+    }
+}
+
+plugin.tx_signup_default{
+    features.requireCHashArgumentForActionArguments = 0
+    settings{
+        defaultUserGroup = 1
+        storagePid = {$plugin.tx_signup.settings.storagePid}
+        email{
+            senderEmail = {$plugin.tx_signup.settings.email.senderEmail}
+            senderName = {$plugin.tx_signup.settings.email.senderName}
+            adminEmail = {$plugin.tx_signup.settings.email.adminEmail}
+        }
+    }
+}
+
+page{
+    includeJSFooter{
+        tx_signup = {$plugin.tx_signup.settings.jsfile}
+    }
+}

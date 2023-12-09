@@ -1,0 +1,34 @@
+# customcategory=signup=SignUp
+# customsubcategory=pages=Pages
+# customsubcategory=captcha=Captcha
+# customsubcategory=styling=Styling
+# customsubcategory=email=Email Settings
+
+plugin.tx_signup{
+    settings{
+        # cat=signup; type=int; label=Frontend User Storage Page
+        storagePid =
+        # cat=signup/email; type=string; label=Sender Email Address
+        email.senderEmail =
+        # cat=signup/email; type=string; label=Sender Name
+        email.senderName =
+        # cat=signup/email; type=string; label=Admin Email Address
+        email.adminEmail =
+        # cat=signup/styling; type=string; label=Path to CSS file for styling
+        cssfile = EXT:signup/Resources/Public/Css/signup.css
+        # cat=signup/pages; type=int; label=Dashboard Page
+        userpages.dashboard =
+        # cat=signup/pages; type=int; label=Settings Page
+        userpages.settings =
+        # cat=signup/pages; type=int; label=SignUp Page
+        userpages.signup =
+        # cat=signup/pages; type=int; label=Login Page
+        userpages.login =
+        # cat=signup/captcha; type=boolean; label=Enable Captcha
+        recaptcha.enabled = 0
+        # cat=signup/captcha; type=boolean; label=Sitekey for Captcha
+        recaptcha.sitekey =
+        # cat=signup/captcha; type=boolean; label=Secretkey for Captcha
+        recaptcha.secretkey =
+    }
+}
