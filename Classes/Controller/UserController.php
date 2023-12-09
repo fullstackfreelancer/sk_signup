@@ -6,7 +6,7 @@ use TYPO3\CMS\Core\Context\Context;
 use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
 use TYPO3\CMS\Core\Crypto\PasswordHashing\PasswordHashFactory;
 use TYPO3\CMS\Core\Type\ContextualFeedbackSeverity;
-use SIMONKOEHLER\Signup\Domain\Repository\UserRepository;
+use SIMONKOEHLER\SkSignup\Domain\Repository\UserRepository;
 
 final class UserController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {

@@ -1,11 +1,14 @@
 # customcategory=signup=SignUp
+# customsubcategory=usergroup=Email Settings
 # customsubcategory=pages=Pages
 # customsubcategory=captcha=Captcha
 # customsubcategory=styling=Styling
 # customsubcategory=email=Email Settings
 
-plugin.tx_signup{
+plugin.tx_sksignup{
     settings{
+        # cat=signup/usergroup; type=int; label=Default User Group for new Users
+        defaultUserGroup =
         # cat=signup; type=int; label=Frontend User Storage Page
         storagePid =
         # cat=signup/email; type=string; label=Sender Email Address

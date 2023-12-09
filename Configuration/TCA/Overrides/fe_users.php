@@ -19,5 +19,5 @@ $temporaryColumns = array(
         'fe_users', $temporaryColumns, 1
 );
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
-        'fe_users', 'tx_signup_key'
+        'fe_users', 'tx_sksignup_key'
 );

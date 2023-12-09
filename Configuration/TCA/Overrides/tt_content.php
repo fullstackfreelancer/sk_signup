@@ -4,19 +4,19 @@ defined('TYPO3') or die();
 (static function (): void {
 
     \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-        'Signup',
+        'SkSignup',
         'Default',
         'Signup Plugin'
     );
 
     \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-        'Signup',
+        'SkSignup',
         'Dashboard',
         'Signup User Dashboard'
     );
 
     \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-        'Signup',
+        'SkSignup',
         'Settings',
         'Signup Settings Form'
     );

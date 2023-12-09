@@ -5,9 +5,9 @@
         <p>The Form will NOT work without a storagePid and signup page set in Typoscript Constants.</p>
     </div>
 </f:if>
-<f:form id="tx-signup-form" action="form" controller="Signup" enctype="multipart/form-data" class="tx-signup-form bg-dark-subtle border shadow">
+<f:form id="tx-sksignup-form" action="form" controller="Signup" enctype="multipart/form-data" class="tx-signup-form bg-light-subtle border shadow">
 
-        <input type="hidden" name="tx_signup_default[init]" value="">
+        <input type="hidden" name="tx_sksignup_default[init]" value="">
         <header class="p-4 border-bottom">
             <div class="fs-3"><f:translate key="form.header"/></div>
         </header>
@@ -37,20 +37,25 @@
 
 <f:section name="formFields">
     <div class="form-floating mb-3">
-        <input id="tx-signup-control-1" class="form-control" type="text" name="tx_signup_default[username]" value="{args.username}">
-        <label for="tx-signup-control-1"><f:translate key="formlabel.username"/></label>
+        <input id="tx-sksignup-control-1" class="form-control" type="text" name="tx_sksignup_default[username]" value="{args.username}">
+        <label for="tx-sksignup-control-1"><f:translate key="formlabel.username"/></label>
     </div>
     <div class="form-floating mb-3">
-        <input id="tx-signup-control-2" class="form-control" type="email" name="tx_signup_default[email]" value="{args.email}">
-        <label for="tx-signup-control-2"><f:translate key="formlabel.email"/></label>
+        <input id="tx-sksignup-control-2" class="form-control" type="email" name="tx_sksignup_default[email]" value="{args.email}">
+        <label for="tx-sksignup-control-2"><f:translate key="formlabel.email"/></label>
     </div>
     <div class="form-floating mb-3">
-        <input id="tx-signup-control-3" class="form-control" type="password" name="tx_signup_default[password]" value="{args.password}">
-        <label for="tx-signup-control-3"><f:translate key="formlabel.password"/></label>
+        <input id="tx-sksignup-control-3" class="form-control" type="password" name="tx_sksignup_default[password]" value="{args.password}">
+        <label for="tx-sksignup-control-3"><f:translate key="formlabel.password"/></label>
     </div>
     <f:if condition="{settings.recaptcha.enabled}">
         <div class="recaptcha-container">
-            RECAPTCHA ENABLED
+            <button type="submit" class="g-recaptcha"
+                data-sitekey="6LfotycpAAAAABG3-LkB4V3qGtKMicPb6XIyZ8TY"
+                data-callback='onSubmit'
+                data-action='submit'>
+              <f:translate key="formlabel.button"/>
+            </button>
         </div>
     </f:if>
 
@@ -58,18 +63,14 @@
         <f:translate key="formlabel.button"/>
     </button>
 
-    <button type="submit" class="g-recaptcha"
-        data-sitekey="6LfotycpAAAAABG3-LkB4V3qGtKMicPb6XIyZ8TY"
-        data-callback='onSubmit'
-        data-action='submit'>
-      <f:translate key="formlabel.button"/>
-    </button>
 </f:section>
 
+<f:if condition="{settings.recaptcha.enabled}">
 <f:asset.script identifier="gugle" src="https://www.google.com/recaptcha/enterprise.js?render=6LfotycpAAAAABG3-LkB4V3qGtKMicPb6XIyZ8TY"/>
 <f:asset.script identifier="gagle">
 function onSubmit(token) {
     console.log(token)
-    //document.getElementById("tx-signup-form").submit();
+    //document.getElementById("tx-sksignup-form").submit();
 }
 </f:asset.script>
+</f:if>

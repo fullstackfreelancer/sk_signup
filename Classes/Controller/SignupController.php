@@ -4,7 +4,7 @@ use Psr\Http\Message\ResponseInterface;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
 use TYPO3\CMS\Core\Crypto\PasswordHashing\PasswordHashFactory;
-use SIMONKOEHLER\Signup\Domain\Repository\UserRepository;
+use SIMONKOEHLER\SkSignup\Domain\Repository\UserRepository;
 
 final class SignupController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
@@ -20,7 +20,7 @@ final class SignupController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
         if($this->request->hasArgument('init')){
 
             $args = $this->request->getArguments();
-            $user = new \SIMONKOEHLER\Signup\Domain\Model\User();
+            $user = new \SIMONKOEHLER\SkSignup\Domain\Model\User();
             $errors = [];
             $check_username_existance = true;
             $check_email_existance = true;
@@ -79,7 +79,7 @@ final class SignupController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
                 $user->setUsergroup($this->settings['defaultUserGroup']);
                 $user->setTxExtbaseType('0');
                 $user->setPid($this->settings['storagePid']);
-                $user->setTxSignupKey($uniqueId);
+                $user->setTxSkSignupKey($uniqueId);
                 $user->setDisable('1');
                 $this->userRepository->add($user);
 

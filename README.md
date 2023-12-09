@@ -7,8 +7,8 @@ This TYPO3 Extension provides a Sign Up Form with Username, Email and Password. 
 - Provides as simple Signup Form
 - Generates Confirmation Email after Signup
 - Strong validation, makes sure password is safe etc.
-- Includes Templates for Bootstrap 5
-- Compatible with Bootstrap Package for TYPO3
+- Includes Templates for Bootstrap 5 (https://getbootstrap.com/)
+- Compatible with Bootstrap Package for TYPO3 (https://www.bootstrap-package.com/)
 
 ## ToDo
 - NOTE: EXTENSION IS NOT PRODUCTION READY YET!

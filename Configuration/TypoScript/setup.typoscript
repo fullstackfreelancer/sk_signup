@@ -24,21 +24,21 @@ plugin.tx_sksignup{
     }
 }
 
-plugin.tx_signup_default{
+plugin.tx_sksignup_default{
     features.requireCHashArgumentForActionArguments = 0
     settings{
-        defaultUserGroup = 1
-        storagePid = {$plugin.tx_signup.settings.storagePid}
+        defaultUserGroup = {$plugin.tx_sksignup.settings.defaultUserGroup}
+        storagePid = {$plugin.tx_sksignup.settings.storagePid}
         email{
-            senderEmail = {$plugin.tx_signup.settings.email.senderEmail}
-            senderName = {$plugin.tx_signup.settings.email.senderName}
-            adminEmail = {$plugin.tx_signup.settings.email.adminEmail}
+            senderEmail = {$plugin.tx_sksignup.settings.email.senderEmail}
+            senderName = {$plugin.tx_sksignup.settings.email.senderName}
+            adminEmail = {$plugin.tx_sksignup.settings.email.adminEmail}
         }
     }
 }
 
 page{
     includeJSFooter{
-        tx_signup = {$plugin.tx_signup.settings.jsfile}
+        tx_sksignup = {$plugin.tx_sksignup.settings.jsfile}
     }
 }

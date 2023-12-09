@@ -17,7 +17,7 @@ class User extends AbstractEntity
     protected string $title = '';
     protected string $disable = '';
     protected string $txExtbaseType = '';
-    protected string $txSignupKey = '';
+    protected string $txSkSignupKey = '';
     protected string $description = '';
     protected string $address = '';
     protected string $company = '';
@@ -118,9 +118,9 @@ class User extends AbstractEntity
         $this->txExtbaseType = $txExtbaseType;
     }
 
-    public function setTxSignupKey(string $txSignupKey): void
+    public function setTxSkSignupKey(string $txSkSignupKey): void
     {
-        $this->txSignupKey = $txSignupKey;
+        $this->txSkSignupKey = $txSkSignupKey;
     }
 
     public function setDisable(string $disable): void

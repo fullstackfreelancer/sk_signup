@@ -1,27 +1,26 @@
+<div class="bg-dark-subtle border shadow">
+    <input type="hidden" name="tx_sksignup_default[init]" value="">
+    <header class="p-4 border-bottom">
+        <div class="fs-3"><f:translate key="form.header"/></div>
+    </header>
 
-                <div class="bg-dark-subtle border shadow">
-                    <input type="hidden" name="tx_signup_default[init]" value="">
-                    <header class="p-4 border-bottom">
-                        <div class="fs-3"><f:translate key="form.header"/></div>
-                    </header>
-
-                    <div class="p-4">
-                        <f:switch expression="{status}">
-                           <f:case value="success">
-                               <f:variable name="loginUrl" value="{f:uri.page(pageUid: settings.userpages.login)}"/>
-                               <f:format.raw>
-                               <f:translate key="form.confirmation_success" arguments="{0: loginUrl}"/>
-                               </f:format.raw>
-                           </f:case>
-                           <f:case value="failure">
-                                <f:translate key="form.confirmation_failure"/>
-                           </f:case>
-                           <f:case value="nokey">
-                                <f:translate key="form.confirmation_nokey"/>
-                           </f:case>
-                           <f:defaultCase>
-                            <p>No confirmation parameters given.</p>
-                           </f:defaultCase>
-                        </f:switch>
-                    </div>
-                </div>
+    <div class="p-4">
+        <f:switch expression="{status}">
+           <f:case value="success">
+               <f:variable name="loginUrl" value="{f:uri.page(pageUid: settings.userpages.login)}"/>
+               <f:format.raw>
+               <f:translate key="form.confirmation_success" arguments="{0: loginUrl}"/>
+               </f:format.raw>
+           </f:case>
+           <f:case value="failure">
+                <f:translate key="form.confirmation_failure"/>
+           </f:case>
+           <f:case value="nokey">
+                <f:translate key="form.confirmation_nokey"/>
+           </f:case>
+           <f:defaultCase>
+            <p>No confirmation parameters given.</p>
+           </f:defaultCase>
+        </f:switch>
+    </div>
+</div>

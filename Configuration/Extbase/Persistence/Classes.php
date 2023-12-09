@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 return [
-    \SIMONKOEHLER\Signup\Domain\Model\User::class => [
+    \SIMONKOEHLER\SkSignup\Domain\Model\User::class => [
         'tableName' => 'fe_users',
         'properties' => [
             'username' => [
