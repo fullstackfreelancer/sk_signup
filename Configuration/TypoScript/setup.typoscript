@@ -1,4 +1,4 @@
-plugin.tx_signup{
+plugin.tx_sksignup{
 
     persistence {
         Tx_Extbase_Domain_Model_FrontendUser {
@@ -9,17 +9,17 @@ plugin.tx_signup{
         }
     }
     settings{
-        demo = {$plugin.tx_signup.settings.demo}
+        demo = {$plugin.tx_sksignup.settings.demo}
         userpages{
-            dashboard = {$plugin.tx_signup.settings.userpages.dashboard}
-            settings = {$plugin.tx_signup.settings.userpages.settings}
-            signup = {$plugin.tx_signup.settings.userpages.signup}
-            login = {$plugin.tx_signup.settings.userpages.login}
+            dashboard = {$plugin.tx_sksignup.settings.userpages.dashboard}
+            settings = {$plugin.tx_sksignup.settings.userpages.settings}
+            signup = {$plugin.tx_sksignup.settings.userpages.signup}
+            login = {$plugin.tx_sksignup.settings.userpages.login}
         }
         recaptcha{
-            enabled = {$plugin.tx_signup.settings.recaptcha.enabled}
-            sitekey = {$plugin.tx_signup.settings.recaptcha.sitekey}
-            secretkey = {$plugin.tx_signup.settings.recaptcha.secretkey}
+            enabled = {$plugin.tx_sksignup.settings.recaptcha.enabled}
+            sitekey = {$plugin.tx_sksignup.settings.recaptcha.sitekey}
+            secretkey = {$plugin.tx_sksignup.settings.recaptcha.secretkey}
         }
     }
 }

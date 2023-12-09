@@ -15,7 +15,7 @@ plugin.tx_signup{
         # cat=signup/email; type=string; label=Admin Email Address
         email.adminEmail =
         # cat=signup/styling; type=string; label=Path to CSS file for styling
-        cssfile = EXT:signup/Resources/Public/Css/signup.css
+        cssfile = EXT:sk_signup/Resources/Public/Css/signup.css
         # cat=signup/pages; type=int; label=Dashboard Page
         userpages.dashboard =
         # cat=signup/pages; type=int; label=Settings Page

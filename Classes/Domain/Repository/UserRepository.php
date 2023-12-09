@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace SIMONKOEHLER\Signup\Domain\Repository;
+namespace SIMONKOEHLER\SkSignup\Domain\Repository;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Persistence\Repository;
@@ -73,7 +73,7 @@ final class UserRepository extends Repository
             ->setCreateAbsoluteUri(true)
             ->setLanguage('current')
             ->setTargetPageUid((int)$settings['userpages']['signup'])->build();
-        $link = $url.'?tx_signup_default%5Baction%5D=confirm&tx_signup_default%5Bkey%5D='.$uniqueId;
+        $link = $url.'?tx_sksignup_default%5Baction%5D=confirm&tx_sksignup_default%5Bkey%5D='.$uniqueId;
         $mail = GeneralUtility::makeInstance(MailMessage::class);
         $mail->from(new Address($settings['email']['senderEmail'], $settings['email']['senderName']));
         $mail->to(
@@ -89,9 +89,9 @@ final class UserRepository extends Repository
         $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getConnectionForTable('fe_users')->createQueryBuilder();
         $queryBuilder->getRestrictions()->removeAll();
         $query = $queryBuilder
-            ->select('uid','pid','tx_signup_key','username')
+            ->select('uid','pid','tx_sksignup_key','username')
             ->from('fe_users')
-            ->where($queryBuilder->expr()->eq('tx_signup_key', $queryBuilder->createNamedParameter($key)));
+            ->where($queryBuilder->expr()->eq('tx_sksignup_key', $queryBuilder->createNamedParameter($key)));
         $rows = $query->execute()->fetchAll();
         return $rows;
     }
@@ -115,8 +115,8 @@ final class UserRepository extends Repository
     {
         GeneralUtility::makeInstance(ConnectionPool::class)->getConnectionForTable('fe_users')->update(
             'fe_users',
-            [ 'disable' => '0','tx_signup_key' => '','description' => 'Activated: '.(new \DateTime())->format('Y-m-d h:i:s') ], // set
-            [ 'tx_signup_key' => $key ]  // where
+            [ 'disable' => '0','tx_sksignup_key' => '','description' => 'Activated: '.(new \DateTime())->format('Y-m-d h:i:s') ], // set
+            [ 'tx_sksignup_key' => $key ]  // where
         );
     }
 

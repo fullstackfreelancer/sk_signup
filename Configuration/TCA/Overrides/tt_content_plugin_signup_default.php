@@ -3,7 +3,7 @@ defined('TYPO3') or die();
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPlugin(
     [
-        'LLL:EXT:signup/Resources/Private/Language/locallang_db.xlf:plugin.default.title',
+        'LLL:EXT:sk_signup/Resources/Private/Language/locallang_db.xlf:plugin.default.title',
         'signup_default',
         'tx_signup-default',
     ],
@@ -16,5 +16,5 @@ $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist']['signup_defau
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
     'signup_default',
-    'FILE:EXT:signup/Configuration/Flexforms/SignupDefault.xml'
+    'FILE:EXT:sk_signup/Configuration/Flexforms/SignupDefault.xml'
 );

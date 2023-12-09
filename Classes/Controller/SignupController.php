@@ -1,5 +1,5 @@
 <?php
-namespace SIMONKOEHLER\Signup\Controller;
+namespace SIMONKOEHLER\SkSignup\Controller;
 use Psr\Http\Message\ResponseInterface;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;

@@ -9,21 +9,21 @@ use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 
 // Configure Plugins
 ExtensionUtility::configurePlugin(
-    'Signup',
+    'SkSignup',
     'Default',
     [SignupController::class => 'form,confirm'],
     [SignupController::class => 'form,confirm']
 );
 
 ExtensionUtility::configurePlugin(
-    'Signup',
+    'SkSignup',
     'Dashboard',
     [UserController::class => 'dashboard'],
     [UserController::class => 'dashboard']
 );
 
 ExtensionUtility::configurePlugin(
-    'Signup',
+    'SkSignup',
     'Settings',
     [UserController::class => 'settings'],
     [UserController::class => 'settings']
@@ -31,10 +31,10 @@ ExtensionUtility::configurePlugin(
 
 // Add default TypoScript
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptConstants(
-    "@import 'EXT:signup/Configuration/TypoScript/constants.typoscript'"
+    "@import 'EXT:sk_signup/Configuration/TypoScript/constants.typoscript'"
 );
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
-    "@import 'EXT:signup/Configuration/TypoScript/setup.typoscript'"
+    "@import 'EXT:sk_signup/Configuration/TypoScript/setup.typoscript'"
 );
 
 // Make sure no cHash is needed when signup is called from emails etc..

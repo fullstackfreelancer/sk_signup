@@ -6,13 +6,13 @@
         <sDEF>
             <ROOT>
                 <sheetTitle>
-                    LLL:EXT:signup/Resources/Private/Language/locallang_db.xlf:plugin.default.title
+                    LLL:EXT:sk_signup/Resources/Private/Language/locallang_db.xlf:plugin.default.title
                 </sheetTitle>
                 <type>array</type>
                 <el>
                     <settings.singlePid>
                         <label>
-                            LLL:EXT:signup/Resources/Private/Language/PluginHaiku/locallang_db.xlf:plugin.default.title
+                            LLL:EXT:sk_signup/Resources/Private/Language/PluginHaiku/locallang_db.xlf:plugin.default.title
                         </label>
                         <config>
                             <type>group</type>

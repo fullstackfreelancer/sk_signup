@@ -1,3 +1,3 @@
 CREATE TABLE fe_users (
-    tx_signup_key varchar(255) DEFAULT '' NOT NULL,
+    tx_sksignup_key varchar(255) DEFAULT '' NOT NULL,
 );

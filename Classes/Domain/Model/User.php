@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace SIMONKOEHLER\Signup\Domain\Model;
+namespace SIMONKOEHLER\SkSignup\Domain\Model;
 
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 
